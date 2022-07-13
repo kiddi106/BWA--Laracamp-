@@ -5,6 +5,8 @@ namespace App\Http\Requests\User\Checkout;
 use Illuminate\Foundation\Http\FormRequest;
 
 use Illuminate\Support\Facades\Auth;
+use phpDocumentor\Reflection\Types\Nullable;
+
 class Store extends FormRequest
 {
     /**
@@ -31,6 +33,7 @@ class Store extends FormRequest
             'occupation' => 'required|string',
             'phone' => 'required|string',
             'address' => 'required|string',
+            'discount' => 'nullable|string|exists:discounts,code,deleted_at,NULL'
             
         ];
     }

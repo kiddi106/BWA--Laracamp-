@@ -49,6 +49,9 @@
                                 <a href="https://wa.me/08817260676?text=Hi, saya ingin bertanya tentang kelas {{ $checkout->Camp->title }}" class="btn btn-primary">
                                     Contact support
                                 </a>
+                                @if ($checkout->payment_status == 'paid')
+                                <a href="{{ route('user.class', ['camp_id'=>$checkout->camp_id,'content'=> 1]) }}" class="btn btn-primary">Class</a>  
+                                @endif
                             </td>
                         </tr>
                     @empty

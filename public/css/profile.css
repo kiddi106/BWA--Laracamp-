@@ -1,0 +1,112 @@
+
+.row{
+    width: 100%;
+    flex-direction: row;
+    margin: 0;
+}
+
+.title h5{
+    margin-left: 120px;
+    font-size: 35pt;
+    font-weight: 600;
+    color: #31B380;
+}
+
+.picture {
+    display: block;
+    margin-left: 270px;
+    margin-right: auto;
+    
+}
+.pictProfile img{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 10px solid #fff;
+    
+    
+}
+.logo img{
+    width: 41;
+    height: 41;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+}
+.maincontent {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    
+}
+.content label{
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000000;
+    
+}
+.content input{
+    border-radius: 40px;
+    padding: 10px 10px;
+    border: 1px solid #E7E5F4;
+    box-shadow: 10px;
+}
+.radio {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+.contentradio {
+    display: flex;
+    padding: 20px 20px;
+    width: auto;
+    height: auto;
+    border: 1px solid #E7E5F4;
+    border-radius: 40px;
+    justify-content: center;
+  	align-items: center;
+    text-align: center;
+}
+.contentradio label{
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom:0 ;
+    margin-left: 10px;
+}
+.content-button {
+    display: flex;
+    width: 569px;
+    height: auto;
+    justify-content: space-between;
+}
+.content-button input{
+    width: 370px;
+}
+.button {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+}
+.button button{
+    display: flex;
+    padding: 10px 40px; 
+    background-color: #7839F3;
+    border-radius: 40px;
+    border: 1px solid #E7E5F4;
+    font-weight: 600;
+    color: #F6F8FD;
+}

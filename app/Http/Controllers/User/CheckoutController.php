@@ -73,6 +73,7 @@ class CheckoutController extends Controller
         $user->phone = $data['phone'];
         $user->address = $data['address'];
         
+        
         $user->save();
         // checkout discount
         if ($request->discount) {
@@ -147,6 +148,7 @@ class CheckoutController extends Controller
     public function getSnapRedirect(Checkout $checkout)
     {
         $orderId = $checkout->id.'-'.Str::random(5);
+        // dd($checkout);
         $price = $checkout->Camp->price * 1000;
         $checkout->midtrans_booking_code = $orderId;
         

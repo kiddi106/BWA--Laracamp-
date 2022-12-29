@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Category;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,9 +16,10 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call([
+            CategorySeeder::class,
             CampTableSeeder::class,
             CampBenefitSeeder::class,
-            AdminUserSeeder::class
+            AdminUserSeeder::class,
         ]);
     }
 }

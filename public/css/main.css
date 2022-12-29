@@ -392,5 +392,251 @@ body {
     height: 42px;
 }
 
+.headerProfile{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.titleHeader {
+    width: auto;
+}
+.titleHeader h5{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: flex;
+    margin-left: 64px;
+    font-size: 35pt;
+    font-weight: 600;
+    color: #31B380;
+}
+
+.picture {
+    display: flex;
+    flex-direction: column;
+    margin-left: 270px;
+    margin-right: auto;
+    
+}
+.pictProfile img{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 10px solid #fff;
+    
+    
+}
+.iconamera img{
+    background-color: black;
+    width: 41;
+    height: 41;
+    /* display: grid; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -40px;
+}
+.maincontent {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    
+}
+.content label{
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000000;
+    
+}
+.content input{
+    border-radius: 40px;
+    padding: 10px 10px;
+    border: 1px solid #E7E5F4;
+    box-shadow: 10px;
+}
+.radio {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+.contentradio {
+    display: flex;
+    padding: 20px 20px;
+    width: auto;
+    height: 40px;
+    border: 1px solid #E7E5F4;
+    border-radius: 15px;
+    justify-content: center;
+  	align-items: center;
+    text-align: center;
+}
+.contentradio label{
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom:0 ;
+    margin-left: 10px;
+}
+.content-button {
+    display: flex;
+    width: 569px;
+    height: auto;
+    justify-content: space-between;
+}
+.content-button input{
+    width: 370px;
+}
+.button {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+}
+.button button{
+    display: flex;
+    padding: 10px 40px; 
+    background-color: #7839F3;
+    border-radius: 40px;
+    border: 1px solid #E7E5F4;
+    font-weight: 600;
+    color: #F6F8FD;
+}
+
+/* Content Class Page */
+.class-wrapp {
+    margin: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    /* background-color: #F6F8FD; */
+}
+.listStudy{
+    
+    width: 320px;
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    border: 2px solid #F6F8FD;
+    border-radius: 15px;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    background-color: #FFFFFF;
+    overflow-y: scroll;
+
+}
+.contentStudy{
+    width: 229px;
+    height: 61px;
+    border: 1px solid #E7E5F4;
+    border-radius: 50px;
+    box-shadow: inset;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+    
+}
+.contentStudy a{
+    text-decoration: none;
+    color: black;  
+}
+
+.contentStudy a:hover{
+    width: 229px;
+    height: 61px;
+    border: 1px solid #E7E5F4;
+    border-radius: 50px;
+    background-color: grey;
+    color: white;
+}
+
+
+.titleStudy{
+    width: auto;
+    height: auto;
+    text-align: center;
+
+}
+.titleStudy h5{
+    font-size: 16px;
+    font-weight: 500;
+}
+.subTitle{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.subTitle h4{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* video Class*/
+.contentPlaylist{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.videoPlaylist{
+    width: 1057px;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.videoPlaylist iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.buttonPlaylist {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.textPlaylist {
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+}
+.textPlaylist h5{
+    font-size: 35px;
+    font-weight: 600;
+}
+.nextPlaylist {
+    width: auto;
+    height: auto;
+}
+.nextPlaylist button{
+    padding:  15px 80px;
+    background-color: #7839F3;
+    border: 1px solid #7839F3;
+    border-radius: 50px;
+    color: #F6F8FD;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 
 /*# sourceMappingURL=main.css.map */

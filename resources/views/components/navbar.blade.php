@@ -9,10 +9,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Program</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('program.index') }}">Program</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mentor</a>
+                    
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
@@ -26,18 +27,29 @@
                 <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                     Halo, {{ Auth::user()->name }}
                     @if (Auth::user()->avatar)
-                    <img src="{{ Auth::user()->avatar }}" class="user-photo" alt="">
-                        
+                    <img src={{ Auth::user()->avatar }} class="user-photo" alt="">
+                    
                     @else
                     <img src="https://ui-avatars.com/api/?name=Admin" class="user-photo" alt="" style="border-radius: 50%">
-                        
                     @endif
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left:auto">
                         <li>
-                            <a href="{{ route('dashboard') }}" class="dropdown-item">My Dashboard</a>
+                            @if (Auth::user()->is_admin)
+                                <a href="{{ route('admin.dashboard') }}" class="dropdown-item">My Dashboard</a>
+                            @else
+                                <a href="{{ route('user.dashboard') }}" class="dropdown-item">My Dashboard</a>
+                            @endif
+
                         </li>
+                        @if (Auth::user()->is_admin == 0)
+                        <li>
+                            <a href="{{ route('user.profile') }}" class="dropdown-item">My Profile</a>
+                        </li>
+                        @endif
+                        
                         @if (Auth::user()->is_admin)
                         <li>
+                            <a href="{{ route('admin.class.index') }}" class="dropdown-item">Class</a>
                             <a href="{{ route('admin.discount.index') }}" class="dropdown-item">Discount</a>
                         </li>         
                         @endif

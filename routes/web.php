@@ -7,7 +7,10 @@ use App\Http\Controllers\User\CheckoutController;
 use App\Http\Controllers\User\DashboardController as UserDashboard;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboard;
 use App\Http\Controllers\Admin\CheckoutController as AdminCheckout;
+use App\Http\Controllers\Admin\ClassController;
 use App\Http\Controllers\Admin\DiscountController as AdminDiscount;
+use App\Http\Controllers\ContentClassController;
+use App\Http\Controllers\ProgramController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +31,9 @@ Route::get('/', function () {
 //     return view('checkout');
 // })->name('checkout');
 
-
+// Program Menu
+// Route::get('program', [, 'index'])->name('program');
+Route::resource('program',ProgramController::class);
 
 // route Socialite
 Route::get('sign-in-google',[UserController::class, 'google'])
@@ -55,8 +60,15 @@ Route::middleware('auth')->group(function (){
     // user dashboard
     Route::prefix('user/dashboard')->namespace('User')->name('user.')->middleware('ensureUserRole:user')->group(function ()
     {
-       Route::get('/',[UserDashboard::class, 'index'])-> name('dashboard');
-    });
+       Route::get('/',[UserDashboard::class, 'index'])->name('dashboard');
+       Route::get('/profile', [UserDashboard::class, 'profile'])->name('profile');
+       Route::post('/storeprofile', [UserDashboard::class, 'storeProfile'])->name('storeprofile');
+      //  Route::get('/class/{camp_id}', [UserDashboard::class, 'class'])->name('class');
+       Route::get('/class/{camp_id}/{content}', [UserDashboard::class, 'class'])->name('class');
+      });
+      
+      //  user profile
+
     // admin dashboard
     Route::prefix('admin/dashboard')->name('admin.')->middleware('ensureUserRole:admin')->group(function ()
     {
@@ -64,9 +76,16 @@ Route::middleware('auth')->group(function (){
 
     //    admin Checkout
        Route::post('checkout/{checkout}', [AdminCheckout::class, 'update'])->name('checkout.update');
+
+      
        
        //    admin Discount
        Route::resource('discount', AdminDiscount::class);
+      //    admin class
+       Route::resource('class', ClassController::class );
+      //    admin content
+      Route::get('createContent/{camp:slug}', [ContentClassController::class, 'createNew'])->name('newContent');
+       Route::resource('content', ContentClassController::class);
     });
 
 

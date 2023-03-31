@@ -63,7 +63,7 @@ class DashboardController extends Controller
        return view('user.class.index', [
         'camp' => $camp,
         'content' => $content,
-        // 'title' => $titleContent,
+        'title' => $titleContent,
         'video' => $video,
         'any' => $any
        ]);
